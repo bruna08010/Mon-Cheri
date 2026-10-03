@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Matrix</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <canvas id="matrix"></canvas>
+
+    <div class="overlay">
+
+        <div id="intro" class="screen">
+
+            <h1>Você chegou até aqui.</h1>
+
+            <p class="question">
+                Agora você precisa escolher.
+            </p>
+
+            <p class="warning">
+                Uma escolha muda tudo.
+            </p>
+
+            <div class="pills">
+
+                <button id="redPill" class="pill red">
+                    <span>🔴</span>
+                    PÍLULA VERMELHA
+                </button>
+
+                <button id="bluePill" class="pill blue">
+                    <span>🔵</span>
+                    PÍLULA AZUL
+                </button>
+
+            </div>
+
+            <p class="small">
+                A escolha é sua...
+            </p>
+
+        </div>
+
+
+        <div id="reveal" class="screen hidden">
+
+            <div id="glitchText"></div>
+
+            <h1 id="title"></h1>
+
+            <p id="message"></p>
+
+            <button id="continueBtn">
+                CONTINUAR
+            </button>
+
+        </div>
+        
+<!-- FINAL VERMELHO -->
+
+<div id="redSecret" class="screen hidden">
+
+    <p class="terminal">
+        > conexão estabelecida...<br>
+        > coração encontrado...<br>
+        > sentimentos detectados...<br>
+        > acesso concedido. ❤️
+    </p>
+
+    <h1>VOCÊ DESCOBRIU A VERDADE. ❤️</h1>
+
+    <p class="finalMessage">
+        Talvez você tenha escolhido a pílula certa...
+        <br><br>
+
+        Porque por trás de todo esse código,
+        tinha uma mensagem que eu queria que você encontrasse.
+        <br><br>
+
+        Eu posso não falar isso o tempo todo,
+        mas você é muito importante para mim.
+        <br><br>
+
+        Obrigada por fazer parte da minha vida,
+        por me fazer sorrir e por ser você.
+        <br><br>
+
+        <strong>
+            Se eu pudesse escolher novamente,
+            eu escolheria você. ❤️
+        </strong>
+    </p>
+
+    <div class="heart">
+        ❤️
+    </div>
+
+    <p class="end">
+        Você ganhou o final secreto. ♡
+    </p>
+
+</div>
+
+
+<!-- FINAL AZUL -->
+
+<div id="blueSecret" class="screen hidden">
+
+    <p class="terminal">
+        > conexão cortada...<br>
+        > erro no sistema...<br>
+        > identidade desconhecida...<br>
+        > acesso negado.
+    </p>
+
+    <h1>VOCÊ NÃO ME AMA.</h1>
+
+    <p class="finalMessage">
+        Vc não sabe de nada.
+        <br><br>
+
+        Já que vc escolheu a pílula azul,
+        vc deve esquecer tudo oq aconteceu!
+        <br><br>
+
+        Esqueça o código.
+        <br>
+        Esqueça essa mensagem.
+        <br>
+        Esqueça essa escolha.
+        <br><br>
+
+        <strong>
+            E finja que nunca descobriu esse segredo. 💙
+        </strong>
+    </p>
+
+    <div class="heart">
+        😔
+    </div>
+
+    <p class="end">
+        Fim?
+    </p>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

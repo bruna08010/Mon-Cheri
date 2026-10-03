@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #00ff41;
+    font-family: "Courier New", monospace;
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.screen {
+    width: min(800px, 90%);
+    padding: 50px 30px;
+
+    text-align: center;
+
+    background: rgba(0, 10, 5, 0.88);
+
+    border: 1px solid #00ff41;
+
+    box-shadow:
+        0 0 20px #00ff41,
+        inset 0 0 30px rgba(0, 255, 65, 0.08);
+
+    animation: appear 1s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: clamp(28px, 5vw, 55px);
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 10px #00ff41,
+        0 0 30px #00ff41;
+}
+
+.question {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.warning {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.pills {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.pill {
+    width: 220px;
+    height: 90px;
+
+    border-radius: 50px;
+
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    color: white;
+
+    border: 3px solid;
+}
+
+.pill span {
+    display: block;
+    font-size: 25px;
+}
+
+.red {
+    background: linear-gradient(145deg, #8b0000, #ff2222);
+    border-color: #ff4444;
+
+    box-shadow: 0 0 20px #ff0000;
+}
+
+.blue {
+    background: linear-gradient(145deg, #001f8b, #174cff);
+    border-color: #4488ff;
+
+    box-shadow: 0 0 20px #004cff;
+}
+
+.pill:hover {
+    transform: scale(1.08);
+}
+
+.red:hover {
+    box-shadow: 0 0 40px red;
+}
+
+.blue:hover {
+    box-shadow: 0 0 40px #0088ff;
+}
+
+.small {
+    margin-top: 40px;
+    color: #666;
+}
+
+#glitchText {
+    font-size: 18px;
+    color: #ff3333;
+    margin-bottom: 20px;
+}
+
+#message {
+    font-size: 20px;
+    line-height: 1.7;
+
+    color: #ddd;
+
+    margin-bottom: 35px;
+}
+
+#continueBtn {
+    padding: 15px 35px;
+
+    background: transparent;
+    color: #00ff41;
+
+    border: 1px solid #00ff41;
+
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#continueBtn:hover {
+    background: #00ff41;
+    color: black;
+
+    box-shadow: 0 0 25px #00ff41;
+}
+
+.terminal {
+    text-align: left;
+    color: #00ff41;
+
+    line-height: 2;
+
+    margin-bottom: 30px;
+}
+
+.finalMessage {
+    color: #ddd;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.heart {
+    font-size: 60px;
+    color: #ff1744;
+
+    margin: 30px;
+
+    animation: pulse 1s infinite;
+
+    text-shadow: 0 0 30px red;
+}
+
+.end {
+    color: #555;
+}
+
+
+/* GLITCH */
+
+.glitch {
+    animation: glitch 0.12s infinite;
+}
+
+@keyframes glitch {
+
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-5px, 3px);
+    }
+
+    40% {
+        transform: translate(5px, -3px);
+    }
+
+    60% {
+        transform: translate(-3px, -2px);
+    }
+
+    80% {
+        transform: translate(3px, 2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes pulse {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+}
